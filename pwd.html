@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>PASSWORD AND OTP GENERATOR </title>
+	<link rel="stylesheet" type="text/css" href="styles2.css">
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Work+Sans:ital@1&family=Yanone+Kaffeesatz:wght@600&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Work+Sans:ital@1&display=swap" rel="stylesheet">
+  <body>
+    <div class="pass">
+      <a name="PASSWORD GENERATOR"></a>
+      <h2>PASSWORD GENERATOR</h2>
+      <p>Click on create password to generate a new pasword</p>
+      <input type="text" name="" placeholder="Create Password"id="password">
+      <div id="btn" onclick="getpassword();">Create Password</div>
+      <a href="index.html" id="lin">Click here to return to Home</a>
+
+    </div>
+    <script type="text/javascript">
+  		function getpassword() {
+  			var chars="0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ!@#$%^&*()_+{}|:[]?><";
+  			var passwordlength=16;
+  			var password="";
+  			for(var i=0;i<passwordlength;i++)
+  			{
+  				var Random=Math.floor(Math.random() * chars.length);
+  				password+=chars.substring(Random,Random+1);
+
+  			}
+          document.getElementById("password").value=password
+  		}
+
+      </script>
+  </body>
+</html>
